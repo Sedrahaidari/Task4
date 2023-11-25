@@ -1,9 +1,19 @@
 /*Sedra Haidari 8933534*/
+html
+{
+    font:normal normal normal 20px/1.5 Arial,Helvetica,sans-serif;
+    
+}
 body{
-    font:normal normal normal 12px/1.5 Arial,Helvetica,sans-serif;
+    display: flex;
+    flex-direction: column;
     width:100w;
     height:100vh;
     background-color:hsla(268, 70%,68%,0.5) ;
+}
+h1{
+    color: #f02;
+    font: size 2.5em; 
 }
 h2{
     color:#f02;
@@ -15,6 +25,7 @@ header{
 nav ul li{
     display:inline;
     list-style-type:none;
+    
 }
 nav ul li{
     color:indigo;
@@ -27,17 +38,23 @@ nav ul li a:hover{
     color:cornsilk;
     background-color: indigo;
     border-color: cornsilk;
+    padding:1em;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
 }
 main{
-    float:left;
-    width: 65vw;
+    flex:2 1 70%;
     background-color:hsla(184, 71%, 68%, 0.5);
 
 
 }
 aside{
-    float:right;
-    width:25vw;
+    flex:1 1 30%;
     background-color:hsla(323, 71%, 68%, 0.5);
 
 }
@@ -48,12 +65,15 @@ aside li{
 }
 
 footer{
-    clear: both;
     background-color:hsla(212, 71%, 68%, 0.5);
 
 }
+img{
+    width:88%;
+    height: 80%;
+}
 .structural{
-    margin: 10px;
+    margin: 1rem;
     padding: 10px;
     border:2px solid black;
 }
@@ -95,4 +115,23 @@ a:hover:{
 }
 footer p{
     font-size:.75em;
+}
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap:0.5rem;
+    column-gap: 0.5rem;
+}
+@media (max-width :600px){
+    html{
+        font-size: 10px;
+    }
+    #gallery{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    section{
+        display: block;
+    }
 }
